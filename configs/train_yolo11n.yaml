@@ -1,0 +1,35 @@
+# YOLO11n 训练超参配置
+#
+# 此文件被 01_train_yolo.py 引用（可覆盖命令行默认值）。
+
+model: yolo11n.pt
+imgsz: 640
+epochs: 150
+batch: 16
+device: 0           # GPU 编号，CPU 用 "cpu"
+workers: 8
+patience: 50        # 早停 patience
+lr0: 0.01           # 初始学习率
+lrf: 0.01           # 最终学习率因子
+momentum: 0.937
+weight_decay: 0.0005
+warmup_epochs: 3
+warmup_momentum: 0.8
+box: 7.5            # box loss gain
+cls: 0.5            # cls loss gain
+dfl: 1.5            # dfl loss gain
+
+# 数据增强
+hsv_h: 0.015
+hsv_s: 0.7
+hsv_v: 0.4
+degrees: 0.0
+translate: 0.1
+scale: 0.5
+fliplr: 0.5
+mosaic: 1.0
+mixup: 0.0
+
+# 输出
+project: outputs/train
+name: cuadc_yolo11n_640

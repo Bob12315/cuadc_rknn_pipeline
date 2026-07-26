@@ -1,0 +1,11 @@
+# Install PyTorch separately for the CUDA version available on the training host.
+ultralytics==8.3.163
+onnx>=1.16,<2
+onnxruntime>=1.18,<2
+opencv-python>=4.10,<5
+numpy>=1.26,<3
+tqdm>=4.66,<5
+PyYAML>=6,<7
+
+# rknn-toolkit2 is distributed separately as a Linux x86_64 wheel.
+# See docs/train_export_convert.md for installation instructions.

@@ -1,0 +1,23 @@
+# CUADC 数据集配置模板
+#
+# 使用前请修改 path 为实际数据集路径。
+# class_names 顺序必须和板端 config/yolo.yaml 的 class_names 一致！
+#
+# 如果修改 names（例如把 class_2 改成 danger_sign），
+# 则板端 config/yolo.yaml 也必须同步修改。
+
+path: /absolute/path/to/cuadc_dataset   # ← 改成你的实际路径
+
+# 数据集目录结构（path 下的子目录）：
+train: images/train
+val: images/val
+test: images/test   # 可选
+
+# 类别名称（顺序必须和板端 class_names 一致）
+names:
+  0: Target
+  1: bucket
+  2: class_2
+
+# 类别数（自动计算，也可以手动指定）
+nc: 3

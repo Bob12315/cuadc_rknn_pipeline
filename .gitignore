@@ -1,0 +1,33 @@
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Local datasets, videos, training runs, and generated artifacts
+datasets/
+videos/
+outputs/
+runs/
+*.pt
+*.pth
+*.onnx
+*.rknn
+*.hef
+*.har
+*.npz
+
+# Logs and machine-specific assistant state
+*.log
+.reasonix/
+reasonix.toml
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

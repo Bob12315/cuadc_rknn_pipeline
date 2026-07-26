@@ -1,0 +1,33 @@
+# RKNN 转换配置
+#
+# 默认使用 FP16，不启用 INT8 量化。
+
+# --- 基本配置 ---
+target_platform: rk3588
+
+# --- FP16 配置（默认）---
+fp16:
+  do_quantization: false
+  mean_values: [[0, 0, 0]]
+  std_values: [[255, 255, 255]]
+
+# --- INT8 配置（可选实验，非默认）---
+int8:
+  do_quantization: true
+  mean_values: [[0, 0, 0]]
+  std_values: [[255, 255, 255]]
+  quantized_dtype: asymmetric_quantized-u8
+  # 量化算法: "normal" / "mmse" / "kl_divergence"
+  quantized_algorithm: normal
+  # 混合精度（如不指定则全 INT8）
+  # quant_img_RGB2BGR: false
+  # 注意：之前 INT8 出现过 class score 全 0 的问题，
+  # 因此不要把 INT8 作为默认部署模型。
+
+# --- ONNX 导入配置 ---
+onnx:
+  # 输入输出名称（通常不需要改）
+  inputs: ["images"]
+  outputs: ["output0"]
+  # 输入 shape（通常不需要改）
+  input_size_list: [[1, 3, 640, 640]]
