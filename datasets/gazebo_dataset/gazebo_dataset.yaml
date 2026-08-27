@@ -1,0 +1,17 @@
+path: /home/level6/deeplearing/ultralytics-8.3.163/cuadc_rknn_pipeline/datasets/gazebo_dataset
+train: images/train
+val: images/val
+nc: 12
+names:
+  0: baozha
+  1: shenghua
+  2: yiran
+  3: fangshe
+  4: buran
+  5: fushi
+  6: youdu
+  7: yushi
+  8: ziran
+  9: ciji
+  10: bucket
+  11: H

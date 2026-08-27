@@ -9,7 +9,6 @@ venv/
 env/
 
 # Local datasets, videos, training runs, and generated artifacts
-datasets/
 videos/
 outputs/
 runs/
